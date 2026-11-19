@@ -1,0 +1,36 @@
+{
+  "project": "ASCII Aurora",
+  "generated_at": "2026-11-19 05:55:56 UTC",
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "total_tokens": 0,
+    "measured_calls": 0,
+    "unmeasured_calls": 0,
+    "calls": 0,
+    "retries": 0,
+    "complete": true,
+    "by_station": {},
+    "by_model": {}
+  },
+  "portfolio_token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cached_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "total_tokens": 0,
+    "measured_calls": 0,
+    "unmeasured_calls": 0,
+    "calls": 0,
+    "retries": 0,
+    "complete": true,
+    "by_station": {},
+    "by_model": {}
+  },
+  "runs": [],
+  "projects": []
+}

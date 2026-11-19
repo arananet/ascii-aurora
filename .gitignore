@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.anvil-factory/
+__pycache__/
+*.pyc
+.test/

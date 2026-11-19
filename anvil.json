@@ -1,0 +1,17 @@
+{
+  "pipeline": "sdlc-default",
+  "project": "ASCII Aurora",
+  "blueprint": "static-site",
+  "metrics": {
+    "_comment": "Optional: Configure your application metrics endpoint and provider credentials here to connect your own metrics provider",
+    "endpoint": "",
+    "provider_key": ""
+  },
+  "checks": [
+    "npm install --no-audit --no-fund && npm run build",
+    "node tools/verify.mjs"
+  ],
+  "protected_paths": [
+    "anvil.json"
+  ]
+}
