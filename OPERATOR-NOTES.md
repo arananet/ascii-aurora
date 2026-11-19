@@ -22,4 +22,4 @@ Operator authored. The ANVIL line never edits this file.
 
 ## Status
 
-- Filed: scaffold, spec, work order and workflow committed to main. Run not yet fired.
+- Filed: scaffold, spec, work order and workflow committed to main at 530b29a773f5efdebf1762661581336951d50938. Run fired on branch anvil/run-ascii-aurora-wo-gh-1; verdict pending at the human gate.
