@@ -1,36 +1,428 @@
 {
   "project": "ASCII Aurora",
-  "generated_at": "2026-11-19 05:55:56 UTC",
+  "generated_at": "2026-11-20 06:12:52 UTC",
   "token_usage": {
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "cached_input_tokens": 0,
-    "cache_creation_input_tokens": 0,
-    "reasoning_tokens": 0,
-    "total_tokens": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "cached_input_tokens": null,
+    "cache_creation_input_tokens": null,
+    "reasoning_tokens": null,
+    "total_tokens": null,
     "measured_calls": 0,
-    "unmeasured_calls": 0,
-    "calls": 0,
+    "unmeasured_calls": 7,
+    "calls": 7,
     "retries": 0,
-    "complete": true,
-    "by_station": {},
-    "by_model": {}
+    "complete": false,
+    "by_station": {
+      "intake": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "spec-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "test-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "builder": {
+        "calls": 3,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "observer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    },
+    "by_model": {
+      "unreported": {
+        "calls": 7,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    }
   },
   "portfolio_token_usage": {
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "cached_input_tokens": 0,
-    "cache_creation_input_tokens": 0,
-    "reasoning_tokens": 0,
-    "total_tokens": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "cached_input_tokens": null,
+    "cache_creation_input_tokens": null,
+    "reasoning_tokens": null,
+    "total_tokens": null,
     "measured_calls": 0,
-    "unmeasured_calls": 0,
-    "calls": 0,
+    "unmeasured_calls": 7,
+    "calls": 7,
     "retries": 0,
-    "complete": true,
-    "by_station": {},
-    "by_model": {}
+    "complete": false,
+    "by_station": {
+      "intake": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "spec-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "test-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "builder": {
+        "calls": 3,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "observer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    },
+    "by_model": {
+      "unreported": {
+        "calls": 7,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    }
   },
-  "runs": [],
+  "runs": [
+    {
+      "work_order_id": "wo-gh-1",
+      "run_id": "a31b17960dc7432980f7acbfb669f607",
+      "title": "Build ASCII Aurora: an aurora borealis in ASCII characters as a single static page, with live HUD and synthesised music",
+      "pipeline": "sdlc-default",
+      "kind": "feature",
+      "verdict": "no_reviews",
+      "human_required": true,
+      "deployment_status": null,
+      "loopbacks": 2,
+      "steps": [
+        {
+          "station": "intake",
+          "status": "failed",
+          "duration_ms": 72.514,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 3755,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "spec-writer",
+          "status": "failed",
+          "duration_ms": 73.262,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 5087,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "test-writer",
+          "status": "failed",
+          "duration_ms": 73.502,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 4208,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "builder",
+          "status": "failed",
+          "duration_ms": 124.469,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 12766,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "checks-gate",
+          "status": "failed",
+          "duration_ms": 311.158,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "loopback",
+          "status": "loopback",
+          "duration_ms": 0.0,
+          "configured_model": null,
+          "executed_model": null,
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "builder",
+          "status": "failed",
+          "duration_ms": 125.374,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 13348,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "checks-gate",
+          "status": "failed",
+          "duration_ms": 312.703,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "loopback",
+          "status": "loopback",
+          "duration_ms": 0.0,
+          "configured_model": null,
+          "executed_model": null,
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "builder",
+          "status": "failed",
+          "duration_ms": 124.783,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 13365,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        },
+        {
+          "station": "checks-gate",
+          "status": "failed",
+          "duration_ms": 310.701,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-spec",
+          "status": "skipped",
+          "duration_ms": 0.548,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-security",
+          "status": "skipped",
+          "duration_ms": 0.549,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-tests",
+          "status": "skipped",
+          "duration_ms": 0.538,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-architecture",
+          "status": "skipped",
+          "duration_ms": 0.544,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-design",
+          "status": "skipped",
+          "duration_ms": 4.85,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "reviewer-ux",
+          "status": "skipped",
+          "duration_ms": 1.848,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "approver",
+          "status": "completed",
+          "duration_ms": 0.05,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "triage-human",
+          "status": "completed",
+          "duration_ms": 0.013,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 0,
+          "budget": 0,
+          "budget_action": "none",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "deployer",
+          "status": "packet_ready",
+          "duration_ms": 0.747,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 3719,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "usage": null
+        },
+        {
+          "station": "observer",
+          "status": "failed",
+          "duration_ms": 74.043,
+          "configured_model": "claude-opus-5-5",
+          "executed_model": null,
+          "measured_tokens": 3726,
+          "budget": 48000,
+          "budget_action": "sent",
+          "cost": null,
+          "executor": {
+            "kind": "command"
+          },
+          "usage": null
+        }
+      ],
+      "token_usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "cached_input_tokens": null,
+        "cache_creation_input_tokens": null,
+        "reasoning_tokens": null,
+        "total_tokens": null,
+        "measured_calls": 0,
+        "unmeasured_calls": 7,
+        "calls": 7,
+        "retries": 0,
+        "complete": false,
+        "by_station": {
+          "intake": {
+            "calls": 1,
+            "measured_calls": 0,
+            "total_tokens": null
+          },
+          "spec-writer": {
+            "calls": 1,
+            "measured_calls": 0,
+            "total_tokens": null
+          },
+          "test-writer": {
+            "calls": 1,
+            "measured_calls": 0,
+            "total_tokens": null
+          },
+          "builder": {
+            "calls": 3,
+            "measured_calls": 0,
+            "total_tokens": null
+          },
+          "observer": {
+            "calls": 1,
+            "measured_calls": 0,
+            "total_tokens": null
+          }
+        },
+        "by_model": {
+          "unreported": {
+            "calls": 7,
+            "measured_calls": 0,
+            "total_tokens": null
+          }
+        }
+      }
+    }
+  ],
   "projects": []
 }

@@ -1,0 +1,832 @@
+{
+  "work_order_id": "wo-gh-1",
+  "pipeline": "sdlc-default",
+  "title": "Build ASCII Aurora: an aurora borealis in ASCII characters as a single static page, with live HUD and synthesised music",
+  "kind": "feature",
+  "steps": [
+    {
+      "station": "intake",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 72.514,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/intake.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 3755,
+      "budget": 48000,
+      "budget_action": "sent"
+    },
+    {
+      "station": "spec-writer",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 73.262,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/spec-writer.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 5087,
+      "budget": 48000,
+      "budget_action": "sent"
+    },
+    {
+      "station": "test-writer",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 73.502,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/test-writer.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 4208,
+      "budget": 48000,
+      "budget_action": "sent"
+    },
+    {
+      "station": "builder",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 124.469,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/builder.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 12766,
+      "budget": 48000,
+      "budget_action": "sent"
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed",
+      "detail": "Gate failed: 2 checks, protected paths: pass; artifact validation failed: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin Required literal not found in full in the builder report: ASCII Aurora Required literal not found in full in the builder report: Made with ANVIL, an open source software factory. Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev Required literal not found in full in the builder report: 74,222,128 Required literal not found in full in the builder report: S1 Required literal not found in full in the builder report: S2 Required literal not found in full in the builder report: S3 Required literal not found in full in the builder report: S4 Required literal not found in full in the builder report: S5 Required literal not found in full in the builder report: S6 Required literal not found in full in the builder report: S7 Required literal not found in full in the builder report: evidence/stills/page-desktop.png Required literal not found in full in the builder report: evidence/stills/page-mobile.png Required literal not found in full in the builder report: evidence/stills/page-sound.png Required literal not found in full in the builder report: evidence/captures.json",
+      "duration_ms": 311.158,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/checks-gate.pre-review.output.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "phase": "pre-review",
+      "commands": [
+        "npm install --no-audit --no-fund && npm run build",
+        "node tools/verify.mjs"
+      ],
+      "exit_codes": [
+        254,
+        1
+      ],
+      "protected_paths": [
+        "anvil.json"
+      ],
+      "protected_path_verdict": "pass",
+      "protected_path_findings": [],
+      "gate_verdict": "fail",
+      "artifact_validation": {
+        "passed": false,
+        "report": "runs/wo-gh-1/builder.output.md",
+        "observed": "missing",
+        "report_source": "none",
+        "required_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "missing_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "findings": [
+          "Builder report artifact runs/wo-gh-1/builder.output.md is missing.",
+          "Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Required literal not found in full in the builder report: Base pin",
+          "Required literal not found in full in the builder report: ASCII Aurora",
+          "Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.",
+          "Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev",
+          "Required literal not found in full in the builder report: 74,222,128",
+          "Required literal not found in full in the builder report: S1",
+          "Required literal not found in full in the builder report: S2",
+          "Required literal not found in full in the builder report: S3",
+          "Required literal not found in full in the builder report: S4",
+          "Required literal not found in full in the builder report: S5",
+          "Required literal not found in full in the builder report: S6",
+          "Required literal not found in full in the builder report: S7",
+          "Required literal not found in full in the builder report: evidence/stills/page-desktop.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-mobile.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-sound.png",
+          "Required literal not found in full in the builder report: evidence/captures.json"
+        ]
+      }
+    },
+    {
+      "station": "loopback",
+      "status": "loopback",
+      "return_to": "builder",
+      "detail": "Loopback to builder: Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+      "reason": "Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+      "duration_ms": 0.0,
+      "cost": null,
+      "artifacts": [],
+      "configured_model": null,
+      "executed_model": null,
+      "executor": null,
+      "feedback": "## Artifact validation\n\n- builder report: runs/wo-gh-1/builder.output.md\n- observed: missing\n- report source: none\n- required literals declared: 17\n  - MISSING: 4675a131eb9aa88097741dc3cdc9772c3db17550\n  - MISSING: Base pin\n  - MISSING: ASCII Aurora\n  - MISSING: Made with ANVIL, an open source software factory.\n  - MISSING: https://anvil-landing-7x1.pages.dev\n  - MISSING: 74,222,128\n  - MISSING: S1\n  - MISSING: S2\n  - MISSING: S3\n  - MISSING: S4\n  - MISSING: S5\n  - MISSING: S6\n  - MISSING: S7\n  - MISSING: evidence/stills/page-desktop.png\n  - MISSING: evidence/stills/page-mobile.png\n  - MISSING: evidence/stills/page-sound.png\n  - MISSING: evidence/captures.json\n- result: fail\n- finding: Builder report artifact runs/wo-gh-1/builder.output.md is missing.\n- finding: Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550\n- finding: Required literal not found in full in the builder report: Base pin\n- finding: Required literal not found in full in the builder report: ASCII Aurora\n- finding: Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.\n- finding: Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev\n- finding: Required literal not found in full in the builder report: 74,222,128\n- finding: Required literal not found in full in the builder report: S1\n- finding: Required literal not found in full in the builder report: S2\n- finding: Required literal not found in full in the builder report: S3\n- finding: Required literal not found in full in the builder report: S4\n- finding: Required literal not found in full in the builder report: S5\n- finding: Required literal not found in full in the builder report: S6\n- finding: Required literal not found in full in the builder report: S7\n- finding: Required literal not found in full in the builder report: evidence/stills/page-desktop.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-mobile.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-sound.png\n- finding: Required literal not found in full in the builder report: evidence/captures.json\n",
+      "from_station": "checks-gate",
+      "attempt_archive": "runs/wo-gh-1/attempts/1"
+    },
+    {
+      "station": "builder",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 125.374,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/builder.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 13348,
+      "budget": 48000,
+      "budget_action": "sent",
+      "attempt": 2,
+      "feedback": {
+        "from_station": "checks-gate",
+        "reason": "Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+        "findings": [
+          "# Checks Gate: pre-review\nBasis: builder_delta\nAttempt: 1\n\n# Check Commands\n## Command 1: npm install --no-audit --no-fund && npm run build\nExit code: 254\nOutput:\n```\nnpm error code ENOENT\nnpm error syscall open\nnpm error path /home/runner/work/ascii-aurora/ascii-aurora/package.json\nnpm error errno -2\nnpm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/home/runner/work/ascii-aurora/ascii-aurora/package.json'\nnpm error enoent This is related to npm not being able to find a file.\nnpm error enoent\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-20T06_12_51_319Z-debug-0.log\n\n```\n\n## Command 2: node tools/verify.mjs\nExit code: 1\nOutput:\n```\nnode:internal/modules/cjs/loader:1433\n  throw err;\n  ^\n\nError: Cannot find module '/home/runner/work/ascii-aurora/ascii-aurora/tools/verify.mjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)\n    at Function._load (node:internal/modules/cjs/loader:1216:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.23.4\n\n```\n"
+        ]
+      }
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed",
+      "detail": "Gate failed: 2 checks, protected paths: pass; artifact validation failed: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin Required literal not found in full in the builder report: ASCII Aurora Required literal not found in full in the builder report: Made with ANVIL, an open source software factory. Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev Required literal not found in full in the builder report: 74,222,128 Required literal not found in full in the builder report: S1 Required literal not found in full in the builder report: S2 Required literal not found in full in the builder report: S3 Required literal not found in full in the builder report: S4 Required literal not found in full in the builder report: S5 Required literal not found in full in the builder report: S6 Required literal not found in full in the builder report: S7 Required literal not found in full in the builder report: evidence/stills/page-desktop.png Required literal not found in full in the builder report: evidence/stills/page-mobile.png Required literal not found in full in the builder report: evidence/stills/page-sound.png Required literal not found in full in the builder report: evidence/captures.json",
+      "duration_ms": 312.703,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/checks-gate.pre-review.output.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 2,
+      "phase": "pre-review",
+      "commands": [
+        "npm install --no-audit --no-fund && npm run build",
+        "node tools/verify.mjs"
+      ],
+      "exit_codes": [
+        254,
+        1
+      ],
+      "protected_paths": [
+        "anvil.json"
+      ],
+      "protected_path_verdict": "pass",
+      "protected_path_findings": [],
+      "gate_verdict": "fail",
+      "artifact_validation": {
+        "passed": false,
+        "report": "runs/wo-gh-1/builder.output.md",
+        "observed": "missing",
+        "report_source": "none",
+        "required_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "missing_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "findings": [
+          "Builder report artifact runs/wo-gh-1/builder.output.md is missing.",
+          "Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Required literal not found in full in the builder report: Base pin",
+          "Required literal not found in full in the builder report: ASCII Aurora",
+          "Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.",
+          "Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev",
+          "Required literal not found in full in the builder report: 74,222,128",
+          "Required literal not found in full in the builder report: S1",
+          "Required literal not found in full in the builder report: S2",
+          "Required literal not found in full in the builder report: S3",
+          "Required literal not found in full in the builder report: S4",
+          "Required literal not found in full in the builder report: S5",
+          "Required literal not found in full in the builder report: S6",
+          "Required literal not found in full in the builder report: S7",
+          "Required literal not found in full in the builder report: evidence/stills/page-desktop.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-mobile.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-sound.png",
+          "Required literal not found in full in the builder report: evidence/captures.json"
+        ]
+      }
+    },
+    {
+      "station": "loopback",
+      "status": "loopback",
+      "return_to": "builder",
+      "detail": "Loopback to builder: Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+      "reason": "Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+      "duration_ms": 0.0,
+      "cost": null,
+      "artifacts": [],
+      "configured_model": null,
+      "executed_model": null,
+      "executor": null,
+      "feedback": "## Artifact validation\n\n- builder report: runs/wo-gh-1/builder.output.md\n- observed: missing\n- report source: none\n- required literals declared: 17\n  - MISSING: 4675a131eb9aa88097741dc3cdc9772c3db17550\n  - MISSING: Base pin\n  - MISSING: ASCII Aurora\n  - MISSING: Made with ANVIL, an open source software factory.\n  - MISSING: https://anvil-landing-7x1.pages.dev\n  - MISSING: 74,222,128\n  - MISSING: S1\n  - MISSING: S2\n  - MISSING: S3\n  - MISSING: S4\n  - MISSING: S5\n  - MISSING: S6\n  - MISSING: S7\n  - MISSING: evidence/stills/page-desktop.png\n  - MISSING: evidence/stills/page-mobile.png\n  - MISSING: evidence/stills/page-sound.png\n  - MISSING: evidence/captures.json\n- result: fail\n- finding: Builder report artifact runs/wo-gh-1/builder.output.md is missing.\n- finding: Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550\n- finding: Required literal not found in full in the builder report: Base pin\n- finding: Required literal not found in full in the builder report: ASCII Aurora\n- finding: Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.\n- finding: Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev\n- finding: Required literal not found in full in the builder report: 74,222,128\n- finding: Required literal not found in full in the builder report: S1\n- finding: Required literal not found in full in the builder report: S2\n- finding: Required literal not found in full in the builder report: S3\n- finding: Required literal not found in full in the builder report: S4\n- finding: Required literal not found in full in the builder report: S5\n- finding: Required literal not found in full in the builder report: S6\n- finding: Required literal not found in full in the builder report: S7\n- finding: Required literal not found in full in the builder report: evidence/stills/page-desktop.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-mobile.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-sound.png\n- finding: Required literal not found in full in the builder report: evidence/captures.json\n",
+      "from_station": "checks-gate",
+      "attempt_archive": "runs/wo-gh-1/attempts/2"
+    },
+    {
+      "station": "builder",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 124.783,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/builder.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 13365,
+      "budget": 48000,
+      "budget_action": "sent",
+      "attempt": 3,
+      "feedback": {
+        "from_station": "checks-gate",
+        "reason": "Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin",
+        "findings": [
+          "# Checks Gate: pre-review\nBasis: builder_delta\nAttempt: 2\n\n# Check Commands\n## Command 1: npm install --no-audit --no-fund && npm run build\nExit code: 254\nOutput:\n```\nnpm error code ENOENT\nnpm error syscall open\nnpm error path /home/runner/work/ascii-aurora/ascii-aurora/package.json\nnpm error errno -2\nnpm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/home/runner/work/ascii-aurora/ascii-aurora/package.json'\nnpm error enoent This is related to npm not being able to find a file.\nnpm error enoent\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-20T06_12_51_759Z-debug-0.log\n\n```\n\n## Command 2: node tools/verify.mjs\nExit code: 1\nOutput:\n```\nnode:internal/modules/cjs/loader:1433\n  throw err;\n  ^\n\nError: Cannot find module '/home/runner/work/ascii-aurora/ascii-aurora/tools/verify.mjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)\n    at Function._load (node:internal/modules/cjs/loader:1216:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.23.4\n\n```\n"
+        ]
+      }
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed",
+      "detail": "Gate failed: 2 checks, protected paths: pass; artifact validation failed: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin Required literal not found in full in the builder report: ASCII Aurora Required literal not found in full in the builder report: Made with ANVIL, an open source software factory. Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev Required literal not found in full in the builder report: 74,222,128 Required literal not found in full in the builder report: S1 Required literal not found in full in the builder report: S2 Required literal not found in full in the builder report: S3 Required literal not found in full in the builder report: S4 Required literal not found in full in the builder report: S5 Required literal not found in full in the builder report: S6 Required literal not found in full in the builder report: S7 Required literal not found in full in the builder report: evidence/stills/page-desktop.png Required literal not found in full in the builder report: evidence/stills/page-mobile.png Required literal not found in full in the builder report: evidence/stills/page-sound.png Required literal not found in full in the builder report: evidence/captures.json",
+      "duration_ms": 310.701,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/checks-gate.pre-review.output.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3,
+      "phase": "pre-review",
+      "commands": [
+        "npm install --no-audit --no-fund && npm run build",
+        "node tools/verify.mjs"
+      ],
+      "exit_codes": [
+        254,
+        1
+      ],
+      "protected_paths": [
+        "anvil.json"
+      ],
+      "protected_path_verdict": "pass",
+      "protected_path_findings": [],
+      "gate_verdict": "fail",
+      "artifact_validation": {
+        "passed": false,
+        "report": "runs/wo-gh-1/builder.output.md",
+        "observed": "missing",
+        "report_source": "none",
+        "required_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "missing_literals": [
+          "4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Base pin",
+          "ASCII Aurora",
+          "Made with ANVIL, an open source software factory.",
+          "https://anvil-landing-7x1.pages.dev",
+          "74,222,128",
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "evidence/stills/page-desktop.png",
+          "evidence/stills/page-mobile.png",
+          "evidence/stills/page-sound.png",
+          "evidence/captures.json"
+        ],
+        "findings": [
+          "Builder report artifact runs/wo-gh-1/builder.output.md is missing.",
+          "Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550",
+          "Required literal not found in full in the builder report: Base pin",
+          "Required literal not found in full in the builder report: ASCII Aurora",
+          "Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.",
+          "Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev",
+          "Required literal not found in full in the builder report: 74,222,128",
+          "Required literal not found in full in the builder report: S1",
+          "Required literal not found in full in the builder report: S2",
+          "Required literal not found in full in the builder report: S3",
+          "Required literal not found in full in the builder report: S4",
+          "Required literal not found in full in the builder report: S5",
+          "Required literal not found in full in the builder report: S6",
+          "Required literal not found in full in the builder report: S7",
+          "Required literal not found in full in the builder report: evidence/stills/page-desktop.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-mobile.png",
+          "Required literal not found in full in the builder report: evidence/stills/page-sound.png",
+          "Required literal not found in full in the builder report: evidence/captures.json"
+        ]
+      }
+    },
+    {
+      "station": "reviewer-spec",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 0.548,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-spec.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-security",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 0.549,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-security.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-tests",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 0.538,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-tests.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-architecture",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 0.544,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-architecture.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-design",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 4.85,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-design.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-ux",
+      "status": "skipped",
+      "detail": "Skipped due to gate failure",
+      "duration_ms": 1.848,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/reviewer-ux.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "approver",
+      "status": "completed",
+      "detail": "Approver verdict: no_reviews",
+      "duration_ms": 0.05,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/report.json"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "triage-human",
+      "status": "completed",
+      "detail": "Human review: required",
+      "duration_ms": 0.013,
+      "cost": null,
+      "artifacts": [],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 0,
+      "budget": 0,
+      "budget_action": "none",
+      "attempt": 3
+    },
+    {
+      "station": "deployer",
+      "status": "packet_ready",
+      "detail": "Packet written to runs/wo-gh-1/deployer.packet.md",
+      "duration_ms": 0.747,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/deployer.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": null,
+      "measured_tokens": 3719,
+      "budget": 48000,
+      "budget_action": "sent",
+      "attempt": 3
+    },
+    {
+      "station": "observer",
+      "status": "failed",
+      "detail": "Executor failed: command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+      "duration_ms": 74.043,
+      "cost": null,
+      "artifacts": [
+        "runs/wo-gh-1/observer.packet.md"
+      ],
+      "configured_model": "claude-opus-5-5",
+      "executed_model": null,
+      "executor": {
+        "kind": "command",
+        "detail": "python3"
+      },
+      "measured_tokens": 3726,
+      "budget": 48000,
+      "budget_action": "sent",
+      "attempt": 3
+    }
+  ],
+  "verdict": "no_reviews",
+  "human_required": true,
+  "max_loopbacks": 2,
+  "loopbacks": 2,
+  "deployment_status": null,
+  "verify_results": [],
+  "risk_hints": [],
+  "decision": {
+    "approver": {
+      "reviews_counted": [],
+      "reviews_expected": [
+        "reviewer-spec",
+        "reviewer-security",
+        "reviewer-tests",
+        "reviewer-architecture",
+        "reviewer-design",
+        "reviewer-ux"
+      ],
+      "rule": "No reviews were produced in this run, so the verdict is no_reviews; standing project reviews are never counted. (Counted 0 reviews, expected 6.)",
+      "reviews_uncounted": [
+        {
+          "station": "reviewer-spec",
+          "reason": "no countable review artifact was produced"
+        },
+        {
+          "station": "reviewer-security",
+          "reason": "no countable review artifact was produced"
+        },
+        {
+          "station": "reviewer-tests",
+          "reason": "no countable review artifact was produced"
+        },
+        {
+          "station": "reviewer-architecture",
+          "reason": "no countable review artifact was produced"
+        },
+        {
+          "station": "reviewer-design",
+          "reason": "no countable review artifact was produced"
+        },
+        {
+          "station": "reviewer-ux",
+          "reason": "no countable review artifact was produced"
+        }
+      ]
+    },
+    "human_gate": {
+      "required": true,
+      "rule": "Verdict is no_reviews, not approved, so a human is required.",
+      "hints_matched": []
+    }
+  },
+  "warnings": [
+    "No reference anchors: This visual run has no reference anchors. The review will proceed under the charter floor alone."
+  ],
+  "astra_measured_tokens_total": 39479,
+  "base_ref": "0dc1697444650ab806adeaa8035b2f1b2da2684c",
+  "evidence": [],
+  "cost": {
+    "total": 0,
+    "measured_steps": 0,
+    "unmeasured_steps": 0
+  },
+  "practices": {
+    "resolved": {
+      "intake": [],
+      "spec-writer": [],
+      "test-writer": [],
+      "builder": [],
+      "checks-gate": [],
+      "reviewer-spec": [],
+      "reviewer-security": [],
+      "reviewer-tests": [],
+      "reviewer-architecture": [],
+      "reviewer-design": [],
+      "reviewer-ux": [],
+      "approver": [],
+      "triage-human": [],
+      "deployer": [],
+      "observer": []
+    },
+    "excluded_topics": [],
+    "active_count": 0
+  },
+  "skills": {
+    "resolved": {
+      "intake": [],
+      "spec-writer": [
+        "architecture-fundamentals",
+        "spec-writing"
+      ],
+      "test-writer": [
+        "test-design"
+      ],
+      "builder": [
+        "architecture-fundamentals",
+        "design-md",
+        "design-taste",
+        "image-to-code",
+        "implementation-craft",
+        "interface-design",
+        "security-baseline",
+        "web-engineering"
+      ],
+      "checks-gate": [],
+      "reviewer-spec": [],
+      "reviewer-security": [
+        "security-baseline"
+      ],
+      "reviewer-tests": [
+        "test-design"
+      ],
+      "reviewer-architecture": [
+        "architecture-fundamentals"
+      ],
+      "reviewer-design": [
+        "design-md",
+        "explainer-video",
+        "image-to-code",
+        "web-design-guidelines"
+      ],
+      "reviewer-ux": [
+        "web-design-guidelines"
+      ],
+      "approver": [],
+      "triage-human": [],
+      "deployer": [],
+      "observer": []
+    },
+    "disabled": [],
+    "catalog_count": 18,
+    "signals": {
+      "surfaces": [
+        "content",
+        "deploy",
+        "ui"
+      ],
+      "product_types": [
+        "interface"
+      ],
+      "kinds": [
+        "feature"
+      ]
+    }
+  },
+  "token_usage": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cached_input_tokens": null,
+    "cache_creation_input_tokens": null,
+    "reasoning_tokens": null,
+    "total_tokens": null,
+    "measured_calls": 0,
+    "unmeasured_calls": 7,
+    "calls": 7,
+    "retries": 0,
+    "complete": false,
+    "by_station": {
+      "intake": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "spec-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "test-writer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "builder": {
+        "calls": 3,
+        "measured_calls": 0,
+        "total_tokens": null
+      },
+      "observer": {
+        "calls": 1,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    },
+    "by_model": {
+      "unreported": {
+        "calls": 7,
+        "measured_calls": 0,
+        "total_tokens": null
+      }
+    }
+  },
+  "efficiency": {
+    "limits": {
+      "max_packet_tokens": 48000,
+      "max_runtime_turns": 40,
+      "tool_output_tokens": 2000,
+      "max_agent_calls": 16,
+      "max_run_tokens": 3500000,
+      "require_usage": false
+    },
+    "stopped": false
+  },
+  "run_id": "a31b17960dc7432980f7acbfb669f607"
+}

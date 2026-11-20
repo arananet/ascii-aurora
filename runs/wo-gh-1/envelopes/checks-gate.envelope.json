@@ -1,0 +1,92 @@
+{
+  "schema": "anvil/envelope@1",
+  "from_station": "checks-gate",
+  "to_station": "reviewer-spec",
+  "work_order_id": "wo-gh-1",
+  "artifact_path": "runs/wo-gh-1/checks-gate.pre-review.output.md",
+  "status": "failed",
+  "created_at": "2026-11-20T06:12:52.444139+00:00",
+  "phase": "pre-review",
+  "commands": [
+    "npm install --no-audit --no-fund && npm run build",
+    "node tools/verify.mjs"
+  ],
+  "exit_codes": [
+    254,
+    1
+  ],
+  "protected_paths": [
+    "anvil.json"
+  ],
+  "protected_path_verdict": "pass",
+  "protected_path_findings": [],
+  "observed_additions": [],
+  "basis": "builder_delta (attempt 3)",
+  "gate_verdict": "fail",
+  "artifact_validation": {
+    "passed": false,
+    "report": "runs/wo-gh-1/builder.output.md",
+    "observed": "missing",
+    "report_source": "none",
+    "required_literals": [
+      "4675a131eb9aa88097741dc3cdc9772c3db17550",
+      "Base pin",
+      "ASCII Aurora",
+      "Made with ANVIL, an open source software factory.",
+      "https://anvil-landing-7x1.pages.dev",
+      "74,222,128",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "evidence/stills/page-desktop.png",
+      "evidence/stills/page-mobile.png",
+      "evidence/stills/page-sound.png",
+      "evidence/captures.json"
+    ],
+    "missing_literals": [
+      "4675a131eb9aa88097741dc3cdc9772c3db17550",
+      "Base pin",
+      "ASCII Aurora",
+      "Made with ANVIL, an open source software factory.",
+      "https://anvil-landing-7x1.pages.dev",
+      "74,222,128",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "evidence/stills/page-desktop.png",
+      "evidence/stills/page-mobile.png",
+      "evidence/stills/page-sound.png",
+      "evidence/captures.json"
+    ],
+    "findings": [
+      "Builder report artifact runs/wo-gh-1/builder.output.md is missing.",
+      "Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550",
+      "Required literal not found in full in the builder report: Base pin",
+      "Required literal not found in full in the builder report: ASCII Aurora",
+      "Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.",
+      "Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev",
+      "Required literal not found in full in the builder report: 74,222,128",
+      "Required literal not found in full in the builder report: S1",
+      "Required literal not found in full in the builder report: S2",
+      "Required literal not found in full in the builder report: S3",
+      "Required literal not found in full in the builder report: S4",
+      "Required literal not found in full in the builder report: S5",
+      "Required literal not found in full in the builder report: S6",
+      "Required literal not found in full in the builder report: S7",
+      "Required literal not found in full in the builder report: evidence/stills/page-desktop.png",
+      "Required literal not found in full in the builder report: evidence/stills/page-mobile.png",
+      "Required literal not found in full in the builder report: evidence/stills/page-sound.png",
+      "Required literal not found in full in the builder report: evidence/captures.json"
+    ]
+  },
+  "output": "## Artifact validation\n\n- builder report: runs/wo-gh-1/builder.output.md\n- observed: missing\n- report source: none\n- required literals declared: 17\n  - MISSING: 4675a131eb9aa88097741dc3cdc9772c3db17550\n  - MISSING: Base pin\n  - MISSING: ASCII Aurora\n  - MISSING: Made with ANVIL, an open source software factory.\n  - MISSING: https://anvil-landing-7x1.pages.dev\n  - MISSING: 74,222,128\n  - MISSING: S1\n  - MISSING: S2\n  - MISSING: S3\n  - MISSING: S4\n  - MISSING: S5\n  - MISSING: S6\n  - MISSING: S7\n  - MISSING: evidence/stills/page-desktop.png\n  - MISSING: evidence/stills/page-mobile.png\n  - MISSING: evidence/stills/page-sound.png\n  - MISSING: evidence/captures.json\n- result: fail\n- finding: Builder report artifact runs/wo-gh-1/builder.output.md is missing.\n- finding: Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550\n- finding: Required literal not found in full in the builder report: Base pin\n- finding: Required literal not found in full in the builder report: ASCII Aurora\n- finding: Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.\n- finding: Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev\n- finding: Required literal not found in full in the builder report: 74,222,128\n- finding: Required literal not found in full in the builder report: S1\n- finding: Required literal not found in full in the builder report: S2\n- finding: Required literal not found in full in the builder report: S3\n- finding: Required literal not found in full in the builder report: S4\n- finding: Required literal not found in full in the builder report: S5\n- finding: Required literal not found in full in the builder report: S6\n- finding: Required literal not found in full in the builder report: S7\n- finding: Required literal not found in full in the builder report: evidence/stills/page-desktop.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-mobile.png\n- finding: Required literal not found in full in the builder report: evidence/stills/page-sound.png\n- finding: Required literal not found in full in the builder report: evidence/captures.json\n",
+  "configured_model": "claude-opus-5-5"
+}

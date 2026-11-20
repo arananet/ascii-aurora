@@ -1,0 +1,123 @@
+{
+  "schema": "anvil/run-state@1",
+  "run_id": "a31b17960dc7432980f7acbfb669f607",
+  "work_order_id": "wo-gh-1",
+  "project": "ASCII Aurora",
+  "pipeline": "sdlc-default",
+  "state": "finished",
+  "current_station": null,
+  "verdict": "no_reviews",
+  "loopbacks": 2,
+  "started_at": "2026-11-20T06:12:50.908325+00:00",
+  "updated_at": "2026-11-20T06:12:52.536360+00:00",
+  "steps": [
+    {
+      "station": "intake",
+      "status": "failed"
+    },
+    {
+      "station": "spec-writer",
+      "status": "failed"
+    },
+    {
+      "station": "test-writer",
+      "status": "failed"
+    },
+    {
+      "station": "builder",
+      "status": "failed"
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed"
+    },
+    {
+      "station": "loopback",
+      "status": "loopback"
+    },
+    {
+      "station": "builder",
+      "status": "failed",
+      "attempt": 2
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed",
+      "attempt": 2
+    },
+    {
+      "station": "loopback",
+      "status": "loopback"
+    },
+    {
+      "station": "builder",
+      "status": "failed",
+      "attempt": 3
+    },
+    {
+      "station": "checks-gate",
+      "status": "failed",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-spec",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-security",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-tests",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-architecture",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-design",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "reviewer-ux",
+      "status": "skipped",
+      "attempt": 3
+    },
+    {
+      "station": "approver",
+      "status": "completed",
+      "attempt": 3
+    },
+    {
+      "station": "triage-human",
+      "status": "completed",
+      "attempt": 3
+    },
+    {
+      "station": "deployer",
+      "status": "packet_ready",
+      "attempt": 3
+    },
+    {
+      "station": "observer",
+      "status": "failed",
+      "attempt": 3
+    }
+  ],
+  "token_usage": {
+    "calls": 7,
+    "total_tokens": null,
+    "measured_calls": 0,
+    "unmeasured_calls": 7
+  },
+  "cost": null,
+  "export_errors": [],
+  "human_required": true,
+  "deployment_status": null
+}
