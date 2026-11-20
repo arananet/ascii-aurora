@@ -4,7 +4,7 @@ Operator authored. The ANVIL line never edits this file.
 
 ## Factory
 
-- Factory spine pin: 4675a131eb9aa88097741dc3cdc9772c3db17550 (arananet/anvil-factory), checked out by the workflow at .anvil-factory as the runner spine only.
+- Factory spine pin: 7111f490472a5669f299b588b284ae72205206eb (arananet/anvil-factory), checked out by the workflow at .anvil-factory as the runner spine only.
 - Stations execute from this project's root through the vendored tools/dispatch_station.py and tools/claude_station.py, taken from the same factory ref.
 - Pipeline: sdlc-default (see anvil.json). Mode: greenfield. Blueprint: static-site.
 - Run cap: max_run_tokens 3500000 in anvil.yaml. Basis: Doom Fire wo-gh-2, a one page order of the same shape with capture evidence, measured 3,106,260 tokens under a 3,500,000 cap; the largest single stations on comparable page orders stay well below the cap.
