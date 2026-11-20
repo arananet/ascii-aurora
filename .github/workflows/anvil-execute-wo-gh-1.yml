@@ -3,12 +3,18 @@ name: anvil-execute-wo-gh-1
 # Execute mode run of the ANVIL line for one known work order (issue 1,
 # ASCII Aurora greenfield build, wo-gh-1). Mirrors the proven doom-fire
 # wo-gh-3 shape: the factory is checked out at .anvil-factory, pinned
-# to the fixed spine 4675a131eb9aa88097741dc3cdc9772c3db17550, as the runner
+# to the fixed spine d99cb7fdf71b886ba0b0b88600ff2fdf92fd4ee3, as the runner
 # spine only, while the stations execute from this project's root through
 # this project's own tools/dispatch_station.py. The filing commit declares
 # protected_paths in anvil.json (only anvil.json itself), so the checks
 # gate treats the authorised tests/ surface as a normal write surface.
 #
+#
+# Re-fire amendment (operator, 2026-11-20, disclosed on issue #1): the
+# spine pin moves from 4675a131 to factory main d99cb7fd (anthropic-only
+# routing, decision 0012) and tools/claude_station.py is re-synced to
+# the same spine, so a failed station names its reason within the
+# executor's cut. No spec, work order or limit changes.
 # Trigger: the vault PAT cannot dispatch workflows, so the trigger is a
 # push to the anvil/run-ascii-aurora-wo-gh-1 branch. The commit this workflow pushes
 # back uses GITHUB_TOKEN, which does not retrigger workflows, so the
@@ -45,7 +51,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: arananet/anvil-factory
-          ref: 4675a131eb9aa88097741dc3cdc9772c3db17550
+          ref: d99cb7fdf71b886ba0b0b88600ff2fdf92fd4ee3
           path: .anvil-factory
 
       - name: Set up Python
