@@ -1,0 +1,29 @@
+{
+  "station": "reviewer-ux",
+  "verdict": "pass",
+  "compliance": {
+    "verdict": "pass",
+    "findings": [
+      "Evidence basis: the packet says rendered evidence could not be captured. The repository does hold evidence/stills/page-desktop.png, page-mobile.png and evidence/captures.json from tools/shots.mjs, and I inspected those stills along with index.html, assets/styles.css and the control handlers in assets/aurora.js (lines 519 to 580). No live interaction was run.",
+      "User flows: pass. The primary task is to watch the scene and optionally turn on sound, change the activity or pause, and all of it can be done from what is shown. The three controls sit in one row at the top left (page-desktop.png, page-mobile.png). Each has a visible label and gives immediate feedback: Sound swaps 'Sound: Off'/'Sound: On', Pause swaps 'Pause'/'Play', and the slider redraws at once even while paused (aurora.js:530 to 541). Every action can be reversed by the same control. Sound and animation stay independent.",
+      "Usability heuristics: pass. Visibility of system state: the HUD shows FPS, LETTERS, AURORA and ELAPSED live, the pressed chips fill with teal, and the button labels state the current state. Error recovery: if AudioContext creation fails, the Sound button is disabled rather than failing silently (aurora.js:562 to 567).",
+      "Accessibility, keyboard and labels: pass. Real <button> and <input type=range> elements in DOM order Sound, Activity, Pause, footer link. The range input is wrapped by a <label for> carrying the visible text 'Activity'. Buttons show a :focus-visible teal ring. The slider's own outline is removed but replaced by .chip--slider:focus-within (styles.css:125 to 129, 162 to 164). The canvas has role=img and a descriptive aria-label. The HUD is a labelled <dl> and is not aria-live, which correctly avoids announcing every frame. Chip and footer link targets are at least 44px tall (--target).",
+      "Accessibility, contrast: pass per the design tokens. #f8fafc and #94a3b8 on #030711, and on the 72% opacity #060b18 chip ground, are both well above 4.5:1.",
+      "Reduced motion: pass. With prefers-reduced-motion: reduce, the page starts paused on a still frame with the button reading 'Play', so the user chooses to start the motion (aurora.js:574 to 579). UI transitions are disabled too.",
+      "Advisory, non blocking (Pause button ARIA semantics): pause-toggle both swaps its label ('Pause' to 'Play') and toggles aria-pressed (aurora.js:524 to 525). In the paused state a screen reader announces 'Play, toggle button, pressed', which contradicts itself. WAI-ARIA button guidance says a toggle's label should not change when aria-pressed is used. Fix: drop aria-pressed from pause-toggle and keep the spec-required label swap. The teal pressed styling can key off a data attribute or class instead. sound-toggle has the same pattern, but 'Sound: On, pressed' still reads coherently, so it is lower priority.",
+      "Advisory, non blocking (sound failure copy): when audio is unavailable, the only explanation is a title tooltip, 'Sound is not available in this browser' (aurora.js:566). Touch and keyboard users never see tooltips, so they find a dimmed 'Sound: Off' chip with no reason given. Consider changing the visible label to 'Sound: Unavailable' in that case.",
+      "Advisory, non blocking (slider value): the slider shows no numeric base value, and AURORA in the HUD shows the modulated effective activity rather than the slider setting. Sighted users therefore get only the thumb position as feedback on what they set. Screen readers announce the native value (10 to 100). This is acceptable for an ambient piece. An aria-valuetext such as 'base 60 percent' would clarify it for assistive technology.",
+      "Copy clarity: pass. 'Sound: Off'/'Sound: On', 'Activity' and 'Pause'/'Play' say what they do. HUD keys are short uppercase terms matching the spec. The footer link text says where it goes. No other copy exists, as R7 requires.",
+      "Responsive: pass. At 390x844 (page-mobile.png) the controls fit on one row with room to spare, the HUD drops below them in a 2x2 grid without overlap, nothing covers the horizon, and captures.json records horizontalOverflow false. The mobile footer is very small at 0.66rem (about 9.9px). It is legible in the still, but consider 0.72rem for readability (advisory)."
+    ]
+  },
+  "quality": {
+    "verdict": "pass",
+    "anchor": "charter floor only",
+    "findings": [
+      "Hierarchy: pass. The aurora is the single focal point. The title, chips, HUD and footer are dim, small and translucent, and they stay clear of the horizon at both viewports.",
+      "States: pass. Hover, active (1px press), focus-visible, pressed (teal fill) and disabled states are defined for the chips, and the footer link has hover and focus states. There are no loading or empty views to design. Audio starts on the click with no network wait.",
+      "Experience character: pass. Opening the page immediately shows moving curtains with a live HUD, which suits an ambient toy. Opt-in sound behind a gesture and a reduced-motion still start respect the visitor. The weak treeline and the faint reflection noted by reviewer-design are art direction points, not UX blockers."
+    ]
+  }
+}

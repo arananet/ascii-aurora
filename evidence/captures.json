@@ -1,7 +1,7 @@
 {
   "tool": "tools/shots.mjs",
   "browser": "/usr/bin/google-chrome (157.0.8103.50)",
-  "takenAt": "2026-11-20T12:28:26.100Z",
+  "takenAt": "2026-11-20T13:08:46.710Z",
   "warmUpMs": 4500,
   "rules": {
     "auroraColourFamily": "g >= 60 && g > r + 25 && b <= g + 20",
@@ -21,22 +21,22 @@
         "width": 1280,
         "height": 800
       },
-      "auroraFractionTop": 0.0894,
-      "nonBlackFractionBottom": 0.0959,
+      "auroraFractionTop": 0.0893,
+      "nonBlackFractionBottom": 0.0958,
       "qa": [
         {
           "fps": 60,
-          "letters": 9131,
+          "letters": 9132,
           "activity": 73,
           "audioState": "off",
-          "elapsedSeconds": 4.6
+          "elapsedSeconds": 4.8
         },
         {
           "fps": 60,
-          "letters": 9158,
+          "letters": 9154,
           "activity": 75,
           "audioState": "off",
-          "elapsedSeconds": 5.6
+          "elapsedSeconds": 5.8
         }
       ],
       "consoleErrors": []
@@ -54,8 +54,8 @@
         "width": 390,
         "height": 844
       },
-      "auroraFractionTop": 0.0729,
-      "nonBlackFractionBottom": 0.1041,
+      "auroraFractionTop": 0.0725,
+      "nonBlackFractionBottom": 0.1023,
       "qa": [
         {
           "fps": 60,
@@ -76,7 +76,7 @@
       },
       "qaBeforeClick": {
         "fps": 60,
-        "letters": 9132,
+        "letters": 9135,
         "activity": 73,
         "audioState": "off",
         "elapsedSeconds": 4.6
@@ -89,14 +89,14 @@
         "height": 800
       },
       "auroraFractionTop": 0.09,
-      "nonBlackFractionBottom": 0.0967,
+      "nonBlackFractionBottom": 0.0966,
       "qa": [
         {
           "fps": 60,
-          "letters": 9173,
+          "letters": 9166,
           "activity": 76,
           "audioState": "on",
-          "elapsedSeconds": 6.3
+          "elapsedSeconds": 6.5
         }
       ],
       "consoleErrors": []

@@ -8,7 +8,7 @@ Exit code: 0
 Output:
 ```
 
-up to date in 158ms
+up to date in 121ms
 
 > ascii-aurora@1.0.0 build
 > node build.mjs

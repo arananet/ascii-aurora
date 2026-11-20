@@ -7,17 +7,17 @@
   ],
   "routed_out": [
     {
-      "reviewer": "reviewer-security",
+      "reviewer": "reviewer-architecture",
       "reason": "Routed out by low risk rule with surface exceptions"
     },
     {
-      "reviewer": "reviewer-architecture",
+      "reviewer": "reviewer-security",
       "reason": "Routed out by low risk rule with surface exceptions"
     }
   ],
   "selected_models": {
-    "reviewer-spec": "review-cheap",
     "reviewer-tests": "review-cheap",
+    "reviewer-spec": "review-cheap",
     "reviewer-design": "review-balanced",
     "reviewer-ux": "review-balanced"
   },

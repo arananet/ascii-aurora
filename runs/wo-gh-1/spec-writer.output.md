@@ -41,3 +41,4 @@ Requirement and scenario ids written or changed by this station: none (the spec 
 3. "Small", "discreet" and "translucent" for the HUD, chips and footer have no numeric size or opacity in the spec. design/tokens.json is the reference that reviewers should hold the build to.
 4. S2 sets the aurora colour family fraction threshold but does not define "aurora colour family". The capture tool must state the rule it uses (for example, pixels within a tolerance of any non background AURORA_STOPS colour or the violet fringe) in captures.json so that reviewers can read the result.
 {"model": "claude-opus-5-5"}
+{"model": "claude-opus-5-5"}

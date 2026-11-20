@@ -232,6 +232,11 @@ Observable criteria:
 The review will proceed under the charter floor alone.
 
 
+## Rendered evidence
+
+**Note:** Rendered evidence could not be captured for this run. Reason: no servable configuration found. This review judged source only.
+
+
 ## Work order
 
 - id: wo-gh-1
@@ -264,7 +269,7 @@ R10, evidence: tools/shots.mjs serving dist/ and capturing with playwright-core 
 
 R11, attribution: the R7 footer is required and is the standing attribution the project owner ordered for every ANVIL built project; README.md is operator authored and stays untouched. The dwcminh.ascii inspiration credit lives in the README and brain/project.md, not on the page.
 
-Scenario accounting, required in the builder report: the builder report (runs/wo-gh-1/builder.output.md) must carry a line beginning "Base pin" carrying the full factory base pin 4675a131eb9aa88097741dc3cdc9772c3db17550, a scenario table with one line per scenario S1, S2, S3, S4, S5, S6, S7 marked RUN or NOT RUN, the evidence file names evidence/stills/page-desktop.png, evidence/stills/page-mobile.png, evidence/stills/page-sound.png and evidence/captures.json, the palette check result carrying the literal 74,222,128, the attribution literal "Made with ANVIL, an open source software factory." with its link https://anvil-landing-7x1.pages.dev, and the build's dist size line. The work order declares required_literals for these strings; a report missing any of them fails the checks gate by design.
+Scenario accounting, required in the builder report: the builder report (runs/wo-gh-1/builder.output.md) must carry a line beginning "Base pin" carrying the full factory base pin 7111f490472a5669f299b588b284ae72205206eb, a scenario table with one line per scenario S1, S2, S3, S4, S5, S6, S7 marked RUN or NOT RUN, the evidence file names evidence/stills/page-desktop.png, evidence/stills/page-mobile.png, evidence/stills/page-sound.png and evidence/captures.json, the palette check result carrying the literal 74,222,128, the attribution literal "Made with ANVIL, an open source software factory." with its link https://anvil-landing-7x1.pages.dev, and the build's dist size line. The work order declares required_literals for these strings; a report missing any of them fails the checks gate by design.
 
 Calibration note: max_run_tokens is 3500000 in anvil.yaml for this project. Basis: Doom Fire wo-gh-2, a one page order of the same shape carrying capture evidence, measured 3,106,260 tokens under a 3,500,000 cap and completed its build with counted reviews on its second attempt; OntoBrain wo-gh-1, an approved full gate run on this factory, measured 2,373,123 tokens total with a largest station of 856,156. A 3,500,000 cap leaves headroom above every single station measured on comparable page orders and matches the figure prescribed for this order. max_packet_tokens 48000 and max_runtime_turns 40 are the proven project values carried from doom-fire.
 
@@ -278,78 +283,29 @@ GitHub issue: https://github.com/arananet/ascii-aurora/issues/1
 
 ## Upstream steps
 
-- intake: failed
-- spec-writer: failed
-- test-writer: failed
-- builder: failed
-- checks-gate: failed
-- loopback: loopback
-- builder: failed
-- checks-gate: failed
-- loopback: loopback
-- builder: failed
-- checks-gate: failed
-- reviewer-spec: skipped
-- reviewer-security: skipped
-- reviewer-tests: skipped
-- reviewer-architecture: skipped
-- reviewer-design: skipped
+- intake: executed
+- spec-writer: executed
+- test-writer: executed
+- builder: executed
+- checks-gate: passed
+- reviewer-spec: executed
+- reviewer-security: routed_out
+- reviewer-tests: executed
+- reviewer-architecture: routed_out
+- reviewer-design: executed
 
 ## Run context
 
 Read the upstream work before you start; it is the input your station builds on.
 
 - Spec for this order: .openspec/specs/ascii-aurora/spec.md
-
-## Loopback feedback (attempt 3 of 3)
-
-This is a re-review. The previous attempt was sent back by checks-gate to builder. Judge the work as it is now, and check that each finding below is resolved; do not pass a finding that is still open.
-
-Reason: Gate checks failed; artifact validation: Builder report artifact runs/wo-gh-1/builder.output.md is missing. Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550 Required literal not found in full in the builder report: Base pin
-
-- # Checks Gate: pre-review
-  Basis: builder_delta
-  Attempt: 2
-  
-  # Check Commands
-  ## Command 1: npm install --no-audit --no-fund && npm run build
-  Exit code: 254
-  Output:
-  ```
-  npm error code ENOENT
-  npm error syscall open
-  npm error path /home/runner/work/ascii-aurora/ascii-aurora/package.json
-  npm error errno -2
-  npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/home/runner/work/ascii-aurora/ascii-aurora/package.json'
-  npm error enoent This is related to npm not being able to find a file.
-  npm error enoent
-  npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-20T06_12_51_759Z-debug-0.log
-  
-  ```
-  
-  ## Command 2: node tools/verify.mjs
-  Exit code: 1
-  Output:
-  ```
-  node:internal/modules/cjs/loader:1433
-    throw err;
-    ^
-  
-  Error: Cannot find module '/home/runner/work/ascii-aurora/ascii-aurora/tools/verify.mjs'
-      at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
-      at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
-      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
-      at Function._load (node:internal/modules/cjs/loader:1216:25)
-      at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
-      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-      at node:internal/main/run_main_module:36:49 {
-    code: 'MODULE_NOT_FOUND',
-    requireStack: []
-  }
-  
-  Node.js v22.23.4
-  
-  ```
+- Output of intake: runs/wo-gh-1/intake.output.md
+- Output of spec-writer: runs/wo-gh-1/spec-writer.output.md
+- Output of test-writer: runs/wo-gh-1/test-writer.output.md
+- Output of builder: runs/wo-gh-1/builder.output.md
+- Output of reviewer-spec: runs/wo-gh-1/reviewer-spec.output.md
+- Output of reviewer-tests: runs/wo-gh-1/reviewer-tests.output.md
+- Output of reviewer-design: runs/wo-gh-1/reviewer-design.output.md
 
 ## Output contract
 

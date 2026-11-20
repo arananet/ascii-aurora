@@ -24,14 +24,14 @@ Surfaces: ui, content
 - reviewer-ux (model: review-balanced)
 
 **Routed out** (2):
-- reviewer-security: Routed out by low risk rule with surface exceptions
 - reviewer-architecture: Routed out by low risk rule with surface exceptions
+- reviewer-security: Routed out by low risk rule with surface exceptions
 
 ## Verdict
 
-Verdict: budget_exceeded
+Verdict: approved
 
-The pipeline has no approver step, so no reviews were aggregated into a verdict.
+All counted reviews passed. (Expected 4 reviews after routing.)
 
 ## Steps
 
@@ -40,5 +40,14 @@ The pipeline has no approver step, so no reviews were aggregated into a verdict.
 - test-writer: executed
 - builder: executed
 - checks-gate: passed
-- reviewer-spec: budget_exceeded
+- reviewer-spec: executed
+- reviewer-security: routed_out
+- reviewer-tests: executed
+- reviewer-architecture: routed_out
+- reviewer-design: executed
+- reviewer-ux: executed
+- approver: completed
+- triage-human: completed
+- deployer: packet_ready
+- observer: executed
 

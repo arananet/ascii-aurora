@@ -1,0 +1,28 @@
+{
+  "station": "reviewer-design",
+  "verdict": "pass",
+  "compliance": {
+    "verdict": "pass",
+    "findings": [
+      "Colors (DESIGN.md Palette, tokens.json colors): pass. assets/styles.css declares background #030711, surface #060b18, surface-raised #0b1526, text #f8fafc, text-secondary #94a3b8, accent #2dd4bf, primary #4ade80, all matching tokens.json. Chip grounds and borders are translucent rgba derivations of surface, surface-raised, text-secondary and accent, and no off-palette hue is introduced. index.html theme-color #030711 and color-scheme dark match the background token.",
+      "Typography (DESIGN.md Typography, tokens.json typography): pass. One monospace stack is used everywhere, identical to font-family-base/heading/mono. body is 15px with line-height 1.5 (font-size-base, line-height-base) and the title uses line-height 1.15 (line-height-heading). The copy inventory matches the documented type scale: one title, one HUD block, control labels, one footer line.",
+      "Typography, advisory and non blocking (tokens.json font-size-scale 1.25): the title and chips use 0.8rem = 12px, which is on the 15px / 1.25 scale. The HUD (0.75rem = 11.25px), footer (0.72rem = 10.8px) and mobile overrides (0.7rem, 0.66rem) are not steps of that scale. Snap them to 12px and 9.6px, or document the micro sizes in DESIGN.md.",
+      "Spacing (tokens.json spacing): pass. All padding and gaps use 4, 8, 16 and 24px from the scale through --space-1..4. The 44px touch target and the 88px/72px slider widths are component dimensions, not spacing.",
+      "Components (DESIGN.md Component Guidelines): pass. Buttons are small dark translucent chips with a thin light border and starlight text. The pressed toggle state (aria-pressed=true) fills with aurora teal, as documented. The slider is a plain narrow range input labelled Activity. The three controls sit in one nowrap row at the top. On desktop the HUD sits in the top right corner. Under 640px it drops below the controls, still in the top left, without overlapping the row (page-mobile.png). The footer is one small line at the very bottom over the lake. Hover, active, focus-visible and disabled states are defined. The slider's removed outline is replaced by a :focus-within ring on its chip.",
+      "Layout (DESIGN.md Layout Principles): pass. The canvas is fixed to the full viewport, html and body are overflow hidden, and captures.json records horizontalOverflow false at 1280x800 and 390x844. The horizon sits at about 62% (about y=496 of 800 in page-desktop.png), with the treeline band on it. The single 640px media query uses the token breakpoint-mobile and keeps one fluid layout.",
+      "Motion (DESIGN.md Motion Rules, tokens.json motion), advisory and non blocking: the scene motion follows the documented rules (slow envelope, ray shimmer, wobbling reflection, Pause freezes, sound independent of animation, and prefers-reduced-motion disables the UI transitions). The chip and link hover transitions, however, use a hardcoded --duration-ui of 180ms, which is not a motion token (duration-fast is 900ms, far too slow for hover feedback). Add a UI duration token to tokens.json rather than keeping an undocumented value."
+    ]
+  },
+  "quality": {
+    "verdict": "pass",
+    "anchor": "charter floor only",
+    "findings": [
+      "Hierarchy: pass. In page-desktop.png and page-mobile.png the aurora curtains are the single focal point. The title, chips, HUD and footer are small, dim and translucent, they rank clearly beneath the sky, and they never reach the horizon.",
+      "Typography: pass. The tracked uppercase slate title, tabular-figure HUD readouts and small monospace chip labels share the scene's character language, as DESIGN.md asks.",
+      "Layout: pass. Spacing is consistent on the 8px grid and nothing collides at 1280x800 or 390x844. The mobile controls row fits within 390px with room to spare for 360px.",
+      "Color: pass. The palette stays restrained to night, aurora greens, teal, cyan and a violet fringe; teal is the one accent and it means focus and pressed. Starlight text #f8fafc on #030711 and slate #94a3b8 on #030711 are both well above 4.5:1. The chip and HUD grounds are translucent surface #060b18 at 72% opacity, which keeps the labels legible over bright rays.",
+      "States: pass. Hover, active, focus-visible, pressed and disabled are defined for the chips. The Sound and Pause buttons swap their visible labels.",
+      "Character, advisory and non blocking: the page reads instantly as an ASCII aurora with undulating curtains, ray texture and a violet fringe, so the charter floor is met. Two art direction points are weaker than DESIGN.md's description. (1) The conifer silhouette, 'a black treeline cutting the horizon', reads only as a dark gap at the horizon in page-desktop.png. The spec-mandated tree colour (2,10,6) is almost identical to the night background, so the '^' shapes show only where airglow sits behind them. Strengthening the airglow directly behind the tree tops would make the cones legible. (2) The lake reflection (nonBlackFractionBottom 0.096) is present and shimmers, but it is faint and mostly dim glyphs. Rows just under the horizon could carry more of the bright bands at REFLECT_SCALE so it reads more clearly as water. Neither point violates the design system or the spec."
+    ]
+  }
+}

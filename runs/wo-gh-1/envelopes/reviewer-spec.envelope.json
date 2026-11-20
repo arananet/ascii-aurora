@@ -3,8 +3,51 @@
   "from_station": "reviewer-spec",
   "to_station": "reviewer-security",
   "work_order_id": "wo-gh-1",
-  "artifact_path": "runs/wo-gh-1/reviewer-spec.packet.md",
-  "status": "skipped",
-  "created_at": "2026-11-20T06:12:52.445504+00:00",
-  "configured_model": "claude-opus-5-5"
+  "artifact_path": "runs/wo-gh-1/reviewer-spec.output.md",
+  "status": "executed",
+  "created_at": "2026-11-20T13:10:37.309144+00:00",
+  "usage": {
+    "input_tokens": 326755,
+    "output_tokens": 4887,
+    "cached_input_tokens": 290743,
+    "cache_creation_input_tokens": 35994,
+    "reasoning_tokens": 0,
+    "total_tokens": 331642,
+    "input_tokens_includes_cache": true
+  },
+  "tokens": {
+    "input_tokens": 326755,
+    "output_tokens": 4887,
+    "cached_input_tokens": 290743,
+    "cache_creation_input_tokens": 35994,
+    "reasoning_tokens": 0,
+    "total_tokens": 331642,
+    "input_tokens_includes_cache": true
+  },
+  "review": {
+    "station": "reviewer-spec",
+    "verdict": "pass",
+    "findings": [
+      "R1/S1: package.json has name ascii-aurora, private, type module, build 'node build.mjs', sole devDependency playwright-core, no runtime dependencies; build.mjs copies index.html and assets/ into dist/ and printed 'dist size: 31999 bytes' when re-run by the reviewer. index.html loads only local assets and a data: favicon.",
+      "R9/S5/S6: node tools/verify.mjs re-run by the reviewer printed all 11 R9 items ok and exited 0. The dash scan uses the explicit 7 file list; the external reference check allows only the attribution href. node --test tests/*.test.mjs: 52 pass, 0 fail.",
+      "R2: the canvas fills the viewport with a 12px monospace grid (about 177 columns at 1280 px), NIGHT (3,7,17), HORIZON = 0.62, RAMP exactly \" .':;+*x%#@\", and one requestAnimationFrame loop.",
+      "R3: three bands with sine-sum centrelines, exponential falloff below the top edge, drifting higher frequency ray modulation, and a violet (167,139,250) fringe within about 1.5 rows of each band top. AURORA_STOPS is defined once with the 7 specified stops. effectiveActivity mixes three sines around the slider base, clamped to 1..100, and drives gain, ray contrast and band reach together.",
+      "R4: stars use the seeded '.', '+' and '*' glyphs in (248,250,252) with per star twinkle phases and are dimmed by skyB. MIN_METEOR_MS 6000 and MAX_METEOR_MS 14000 schedule meteors that live 900 ms with an 8 cell fading diagonal trail. The treeline is 2 to 4 cells of '^' and '#' in (2,10,6).",
+      "R5: lake rows sample the sky at 0.8 times the distance to the horizon, scaled by REFLECT_SCALE 0.55, using the same colour table, with a wobble of round(2*sin*sin), so at most 2 cells, and hash based shimmer dimming. The treeline is not in skyB, so it is not reflected.",
+      "R6: the HUD has ids hud-fps, hud-letters, hud-activity and hud-elapsed. FPS is averaged over a 30 frame window, and the HUD refreshes every 250 ms. Real button and range elements carry the specified ids and labels, and the slider range is 10..100 with immediate effect. Pause freezes the scene clock and rendering. window.__asciiAurora exposes fps, letters, activity, audioState and elapsedSeconds.",
+      "R7/R11: the only visible copy is the title 'ASCII Aurora' and the single footer anchor 'Made with ANVIL, an open source software factory.' linking to https://anvil-landing-7x1.pages.dev. In both stills it sits over the dark lake bottom, and the controls and HUD stay above the horizon. README.md, brain/ and .openspec/ are unchanged against HEAD.",
+      "R8: audio.js creates the AudioContext only in start(), which is called from the Sound click handler, and stop() suspends it. Pads use roots 110.00, 87.31, 130.81 and 98.00 Hz with +/-7 cent detuned oscillators through a lowpass, 8 s per chord with overlapping attack and release. Bells use A minor pentatonic notes in octaves 4 and 5, a sine plus a partial with exponential decay, every 2.5 to 6 s. The delay is 0.45 s with 0.35 feedback, master gain is 0.16, and audio and animation do not control each other.",
+      "R10/S2/S3/S4/S7: captures.json records desktop auroraFractionTop 0.0893 (>0.02) and nonBlackFractionBottom 0.0958 (>0.01), no overflow, letters 9132 and 9154, fps 60, activity 73 and 75, and elapsedSeconds 4.8 then 5.8 (delta 1.0). The sound capture reads 'off' before the click and 'on' after. The mobile capture has no overflow and auroraFractionTop 0.0725 (>0.01). The stills match these values on inspection.",
+      "Builder report carries the Base pin 7111f490472a5669f299b588b284ae72205206eb, an S1 to S7 table all RUN, the four evidence file names, the palette literal 74,222,128, the attribution literal with its link, and the dist size line.",
+      "Non blocking observation: the spec mandates treeline colour (2,10,6) on night (3,7,17), so the conifers are nearly invisible in the stills. This follows the spec and is not a defect; the builder disclosed it.",
+      "Non blocking observation: at 640 px and narrower the HUD moves below the controls row in the top left. It stays in the top band above the horizon, which still satisfies 'a top corner' and 'never covering the horizon'.",
+      "Non blocking observation: ELAPSED keeps counting wall time while paused. The spec does not say whether ELAPSED stops on pause; the animation itself freezes completely as R6 requires."
+    ]
+  },
+  "configured_model": "claude-opus-5-5",
+  "executor": {
+    "kind": "command",
+    "detail": "python3"
+  },
+  "executed_model": "claude-opus-5-5"
 }

@@ -19,5 +19,5 @@
       "description": "Treeline colour (2,10,6) is darker than the night ground (3,7,17), so the conifers read only as a dark notch where aurora or airglow sits behind them, not as distinct shapes."
     }
   ],
-  "statement": "Measured: aurora colour family fraction top half 0.0894, non black bottom half 0.0959, no horizontal overflow, fps 60. Focal point is the aurora; title, chips and HUD stay quiet in the top band above the horizon. Two gaps recorded above."
+  "statement": "Measured: aurora colour family fraction top half 0.0893, non black bottom half 0.0958, no horizontal overflow, fps 60. Focal point is the aurora; title, chips and HUD stay quiet in the top band above the horizon. Two gaps recorded above."
 }

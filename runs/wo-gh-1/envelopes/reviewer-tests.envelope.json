@@ -3,8 +3,45 @@
   "from_station": "reviewer-tests",
   "to_station": "reviewer-architecture",
   "work_order_id": "wo-gh-1",
-  "artifact_path": "runs/wo-gh-1/reviewer-tests.packet.md",
-  "status": "skipped",
-  "created_at": "2026-11-20T06:12:52.447686+00:00",
-  "configured_model": "claude-opus-5-5"
+  "artifact_path": "runs/wo-gh-1/reviewer-tests.output.md",
+  "status": "executed",
+  "created_at": "2026-11-20T13:11:08.756584+00:00",
+  "usage": {
+    "input_tokens": 139003,
+    "output_tokens": 2559,
+    "cached_input_tokens": 120877,
+    "cache_creation_input_tokens": 18116,
+    "reasoning_tokens": 0,
+    "total_tokens": 141562,
+    "input_tokens_includes_cache": true
+  },
+  "tokens": {
+    "input_tokens": 139003,
+    "output_tokens": 2559,
+    "cached_input_tokens": 120877,
+    "cache_creation_input_tokens": 18116,
+    "reasoning_tokens": 0,
+    "total_tokens": 141562,
+    "input_tokens_includes_cache": true
+  },
+  "review": {
+    "station": "reviewer-tests",
+    "verdict": "pass",
+    "findings": [
+      "Mapping: each spec scenario S1 to S7 has named tests. S1 is in tests/s1-build.test.mjs, S5 in tests/s5-palette-constants.test.mjs, S6 in tests/s6-dashes-external-refs.test.mjs, and S2, S3, S4 and S7 in tests/captures.test.mjs. Every test name carries its scenario id, which meets the test-design rule of one scenario, at least one test, named after the scenario.",
+      "Passing: I re-ran the project checks on the current tree. `npm install --no-audit --no-fund && npm run build` printed 'dist size: 31999 bytes'. `node tools/verify.mjs` printed 'verify: all 11 checks passed'. `node --test \"tests/*.test.mjs\"` reported '# tests 52', '# pass 52', '# fail 0', '# skipped 0'.",
+      "Real artifacts: the tests read the real sources and run the real build.mjs and verify.mjs. The capture tests decode the committed PNG stills and measure the aurora and non-black pixel fractions themselves, instead of trusting the numbers in captures.json alone.",
+      "Can fail (TDD red check): the gate saw the checks pass before the builder ran because this is a re-fire, and the suite and sources were already at HEAD. So I ran my own mutation in a temp copy. I changed the 0.78 stop to 74,222,129 and replaced tools/verify.mjs with process.exit(0). Result: 15 pass, 37 fail. The test-writer separately recorded 51 of 52 failing on an empty project, with failures naming the missing artifacts. The suite is not a facade.",
+      "Rejection cases: every R9 verify rule has negative tests, for example a dash in each listed file, extra or remote references, a .mp3 under assets/, broken AURORA_STOPS or RAMP, and a missing dist/. Excluded paths are tested to stay excluded. This meets the bar of one passing and one rejected input per validation rule.",
+      "Accounting: the baseline was 52 tests, with 0 added, 0 edited and 0 deleted or skipped. No existing test was weakened.",
+      "Non-blocking: S2, S3, S4 and S7 check committed evidence and do not launch a browser. This is correct, because the spec makes captures evidence and never a check. It does mean those tests are only as fresh as the last shots.mjs run.",
+      "Non-blocking: several R2 to R8 bars have no spec scenario, so no test covers them: grid columns, horizon percent, fringe colour, treeline height, wobble bound, meteor lifetime, chord hold, master gain and delay values. The test-writer disclosed this as spec open point 2. It is a spec coverage gap, not a test defect."
+    ]
+  },
+  "configured_model": "claude-opus-5-5",
+  "executor": {
+    "kind": "command",
+    "detail": "python3"
+  },
+  "executed_model": "claude-opus-5-5"
 }

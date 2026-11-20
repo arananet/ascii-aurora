@@ -1,15 +1,15 @@
 {
   "schema": "anvil/run-state@1",
-  "run_id": "577db9aa0a1747a6a0ace7375a4ad1e2",
+  "run_id": "91e1899096e44bc59e7ffab59f8fdefe",
   "work_order_id": "wo-gh-1",
   "project": "ASCII Aurora",
   "pipeline": "sdlc-default",
   "state": "finished",
   "current_station": null,
-  "verdict": "budget_exceeded",
+  "verdict": "approved",
   "loopbacks": 0,
-  "started_at": "2026-11-20T12:13:30.554426+00:00",
-  "updated_at": "2026-11-20T12:29:32.691395+00:00",
+  "started_at": "2026-11-20T13:06:32.533932+00:00",
+  "updated_at": "2026-11-20T13:13:39.525455+00:00",
   "steps": [
     {
       "station": "intake",
@@ -33,13 +33,49 @@
     },
     {
       "station": "reviewer-spec",
-      "status": "budget_exceeded"
+      "status": "executed"
+    },
+    {
+      "station": "reviewer-security",
+      "status": "routed_out"
+    },
+    {
+      "station": "reviewer-tests",
+      "status": "executed"
+    },
+    {
+      "station": "reviewer-architecture",
+      "status": "routed_out"
+    },
+    {
+      "station": "reviewer-design",
+      "status": "executed"
+    },
+    {
+      "station": "reviewer-ux",
+      "status": "executed"
+    },
+    {
+      "station": "approver",
+      "status": "completed"
+    },
+    {
+      "station": "triage-human",
+      "status": "completed"
+    },
+    {
+      "station": "deployer",
+      "status": "packet_ready"
+    },
+    {
+      "station": "observer",
+      "status": "executed"
     }
   ],
   "token_usage": {
-    "calls": 4,
-    "total_tokens": 4482750,
-    "measured_calls": 4,
+    "calls": 9,
+    "total_tokens": 2482041,
+    "measured_calls": 9,
     "unmeasured_calls": 0
   },
   "cost": null,

@@ -19,5 +19,5 @@
       "description": "Footer link is set at 0.66rem (about 9.9 px) at widths up to 640 px so it stays one line at 360 px; small for body copy, acceptable for a single attribution line."
     }
   ],
-  "statement": "Measured: aurora fraction top half 0.0729, non black bottom 0.1041, no horizontal overflow at 390x844; also checked 360x640 with scrollWidth equal to viewport."
+  "statement": "Measured: aurora fraction top half 0.0725, non black bottom 0.1023, no horizontal overflow at 390x844; also checked 360x640 with scrollWidth equal to viewport."
 }
