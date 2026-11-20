@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ASCII Aurora</title>
+  <meta name="description" content="An aurora borealis over a lake, drawn live in ASCII characters, with a synthesised ambient soundtrack.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#030711">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <canvas id="scene" aria-label="An animated aurora borealis over a lake, drawn in ASCII characters" role="img"></canvas>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <h1 class="title">ASCII Aurora</h1>
+      <div class="controls" role="group" aria-label="Scene controls">
+        <button type="button" id="sound-toggle" class="chip" aria-pressed="false">Sound: Off</button>
+        <label class="chip chip--slider" for="activity-slider">
+          <span class="chip__label">Activity</span>
+          <input type="range" id="activity-slider" min="10" max="100" step="1" value="60">
+        </label>
+        <button type="button" id="pause-toggle" class="chip" aria-pressed="false">Pause</button>
+      </div>
+    </div>
+
+    <dl class="hud" aria-label="Live statistics">
+      <div class="hud__row"><dt>FPS</dt><dd id="hud-fps">0</dd></div>
+      <div class="hud__row"><dt>LETTERS</dt><dd id="hud-letters">0</dd></div>
+      <div class="hud__row"><dt>AURORA</dt><dd id="hud-activity">0%</dd></div>
+      <div class="hud__row"><dt>ELAPSED</dt><dd id="hud-elapsed">00:00</dd></div>
+    </dl>
+  </header>
+
+  <footer class="footer">
+    <a class="footer__link" href="https://anvil-landing-7x1.pages.dev">Made with ANVIL, an open source software factory.</a>
+  </footer>
+
+  <script src="assets/audio.js"></script>
+  <script src="assets/aurora.js"></script>
+</body>
+</html>

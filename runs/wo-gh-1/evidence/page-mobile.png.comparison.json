@@ -1,0 +1,23 @@
+{
+  "output": "evidence/stills/page-mobile.png",
+  "anchor_cited": null,
+  "criteria_checked": [
+    "hierarchy",
+    "typography",
+    "layout",
+    "color",
+    "states",
+    "character"
+  ],
+  "gaps": [
+    {
+      "criterion": "layout",
+      "description": "At narrow widths the HUD drops below the controls row as a 2x2 block in the top left, so the top band takes about 125 px; the horizon at 62 percent stays clear."
+    },
+    {
+      "criterion": "typography",
+      "description": "Footer link is set at 0.66rem (about 9.9 px) at widths up to 640 px so it stays one line at 360 px; small for body copy, acceptable for a single attribution line."
+    }
+  ],
+  "statement": "Measured: aurora fraction top half 0.0729, non black bottom 0.1041, no horizontal overflow at 390x844; also checked 360x640 with scrollWidth equal to viewport."
+}

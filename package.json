@@ -1,0 +1,16 @@
+{
+  "name": "ascii-aurora",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An aurora borealis drawn in ASCII characters on a single static page.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node tools/verify.mjs",
+    "shots": "node tools/shots.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.65.1"
+  }
+}

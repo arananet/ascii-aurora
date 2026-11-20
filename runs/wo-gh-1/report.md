@@ -9,37 +9,36 @@ Status: new
 
 Outcome: accepted
 
-Risk: medium
+Risk: low
 
-Surfaces: ui, content, deploy
+Surfaces: ui, content
+
+## Routing
+
+**Decision**: Low risk; UI surface keeps reviewer-design and reviewer-ux
+
+**Selected reviewers** (4):
+- reviewer-spec (model: review-cheap)
+- reviewer-tests (model: review-cheap)
+- reviewer-design (model: review-balanced)
+- reviewer-ux (model: review-balanced)
+
+**Routed out** (2):
+- reviewer-security: Routed out by low risk rule with surface exceptions
+- reviewer-architecture: Routed out by low risk rule with surface exceptions
 
 ## Verdict
 
-Verdict: no_reviews
+Verdict: budget_exceeded
 
-No reviews were produced in this run, so the verdict is no_reviews; standing project reviews are never counted. (Counted 0 reviews, expected 6.)
+The pipeline has no approver step, so no reviews were aggregated into a verdict.
 
 ## Steps
 
-- intake: failed
-- spec-writer: failed
-- test-writer: failed
-- builder: failed
-- checks-gate: failed
-- loopback: loopback
-- builder: failed
-- checks-gate: failed
-- loopback: loopback
-- builder: failed
-- checks-gate: failed
-- reviewer-spec: skipped
-- reviewer-security: skipped
-- reviewer-tests: skipped
-- reviewer-architecture: skipped
-- reviewer-design: skipped
-- reviewer-ux: skipped
-- approver: completed
-- triage-human: completed
-- deployer: packet_ready
-- observer: failed
+- intake: executed
+- spec-writer: executed
+- test-writer: executed
+- builder: executed
+- checks-gate: passed
+- reviewer-spec: budget_exceeded
 

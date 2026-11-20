@@ -1,0 +1,105 @@
+{
+  "tool": "tools/shots.mjs",
+  "browser": "/usr/bin/google-chrome (157.0.8103.50)",
+  "takenAt": "2026-11-20T12:28:26.100Z",
+  "warmUpMs": 4500,
+  "rules": {
+    "auroraColourFamily": "g >= 60 && g > r + 25 && b <= g + 20",
+    "nonBlack": "max(r, g, b) > 30"
+  },
+  "captures": [
+    {
+      "name": "desktop",
+      "file": "evidence/stills/page-desktop.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "title": "ASCII Aurora",
+      "horizontalOverflow": false,
+      "screenshotSize": {
+        "width": 1280,
+        "height": 800
+      },
+      "auroraFractionTop": 0.0894,
+      "nonBlackFractionBottom": 0.0959,
+      "qa": [
+        {
+          "fps": 60,
+          "letters": 9131,
+          "activity": 73,
+          "audioState": "off",
+          "elapsedSeconds": 4.6
+        },
+        {
+          "fps": 60,
+          "letters": 9158,
+          "activity": 75,
+          "audioState": "off",
+          "elapsedSeconds": 5.6
+        }
+      ],
+      "consoleErrors": []
+    },
+    {
+      "name": "mobile",
+      "file": "evidence/stills/page-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "ASCII Aurora",
+      "horizontalOverflow": false,
+      "screenshotSize": {
+        "width": 390,
+        "height": 844
+      },
+      "auroraFractionTop": 0.0729,
+      "nonBlackFractionBottom": 0.1041,
+      "qa": [
+        {
+          "fps": 60,
+          "letters": 2793,
+          "activity": 73,
+          "audioState": "off",
+          "elapsedSeconds": 4.5
+        }
+      ],
+      "consoleErrors": []
+    },
+    {
+      "name": "sound",
+      "file": "evidence/stills/page-sound.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "qaBeforeClick": {
+        "fps": 60,
+        "letters": 9132,
+        "activity": 73,
+        "audioState": "off",
+        "elapsedSeconds": 4.6
+      },
+      "soundLabel": "Sound: On",
+      "title": "ASCII Aurora",
+      "horizontalOverflow": false,
+      "screenshotSize": {
+        "width": 1280,
+        "height": 800
+      },
+      "auroraFractionTop": 0.09,
+      "nonBlackFractionBottom": 0.0967,
+      "qa": [
+        {
+          "fps": 60,
+          "letters": 9173,
+          "activity": 76,
+          "audioState": "on",
+          "elapsedSeconds": 6.3
+        }
+      ],
+      "consoleErrors": []
+    }
+  ]
+}

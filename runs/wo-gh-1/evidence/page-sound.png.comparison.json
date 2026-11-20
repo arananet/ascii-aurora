@@ -1,0 +1,14 @@
+{
+  "output": "evidence/stills/page-sound.png",
+  "anchor_cited": null,
+  "criteria_checked": [
+    "hierarchy",
+    "typography",
+    "layout",
+    "color",
+    "states",
+    "character"
+  ],
+  "gaps": [],
+  "statement": "Sound toggle shows 'Sound: On' with the teal pressed state; animation keeps running (letters and elapsed advance). No gaps found at charter bar beyond those recorded for the desktop capture."
+}

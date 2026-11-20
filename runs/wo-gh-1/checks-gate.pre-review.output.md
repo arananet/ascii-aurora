@@ -1,86 +1,62 @@
 # Checks Gate: pre-review
 Basis: builder_delta
-Attempt: 3
+Attempt: 1
 
 # Check Commands
 ## Command 1: npm install --no-audit --no-fund && npm run build
-Exit code: 254
+Exit code: 0
 Output:
 ```
-npm error code ENOENT
-npm error syscall open
-npm error path /home/runner/work/ascii-aurora/ascii-aurora/package.json
-npm error errno -2
-npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/home/runner/work/ascii-aurora/ascii-aurora/package.json'
-npm error enoent This is related to npm not being able to find a file.
-npm error enoent
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-20T06_12_52_197Z-debug-0.log
+
+up to date in 158ms
+
+> ascii-aurora@1.0.0 build
+> node build.mjs
+
+dist size: 31999 bytes
 
 ```
 
 ## Command 2: node tools/verify.mjs
-Exit code: 1
+Exit code: 0
 Output:
 ```
-node:internal/modules/cjs/loader:1433
-  throw err;
-  ^
-
-Error: Cannot find module '/home/runner/work/ascii-aurora/ascii-aurora/tools/verify.mjs'
-    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
-    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
-    at Function._load (node:internal/modules/cjs/loader:1216:25)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-
-Node.js v22.23.4
+verify: ok (1) AURORA_STOPS defined once with 7 stops
+verify: ok (2) stop 0.78 = (74,222,128)
+verify: ok (3) ramp literal " .':;+*x%#@"
+verify: ok (4) MIN_METEOR_MS = 6000, MAX_METEOR_MS = 14000, REFLECT_SCALE = 0.55
+verify: ok (5) audio is synthesised, no audio file references
+verify: ok (6) attribution anchor present once
+verify: ok (7) HUD and control ids present
+verify: ok (8) window.__asciiAurora exposed
+verify: ok (9) dist/ holds index.html and the assets
+verify: ok (10) no em or en dash in 7 authored files
+verify: ok (11) only external reference is the attribution href
+verify: all 11 checks passed
 
 ```
 
 ## Artifact validation
 
 - builder report: runs/wo-gh-1/builder.output.md
-- observed: missing
-- report source: none
+- observed: present
+- report source: station
 - required literals declared: 17
-  - MISSING: 4675a131eb9aa88097741dc3cdc9772c3db17550
-  - MISSING: Base pin
-  - MISSING: ASCII Aurora
-  - MISSING: Made with ANVIL, an open source software factory.
-  - MISSING: https://anvil-landing-7x1.pages.dev
-  - MISSING: 74,222,128
-  - MISSING: S1
-  - MISSING: S2
-  - MISSING: S3
-  - MISSING: S4
-  - MISSING: S5
-  - MISSING: S6
-  - MISSING: S7
-  - MISSING: evidence/stills/page-desktop.png
-  - MISSING: evidence/stills/page-mobile.png
-  - MISSING: evidence/stills/page-sound.png
-  - MISSING: evidence/captures.json
-- result: fail
-- finding: Builder report artifact runs/wo-gh-1/builder.output.md is missing.
-- finding: Required literal not found in full in the builder report: 4675a131eb9aa88097741dc3cdc9772c3db17550
-- finding: Required literal not found in full in the builder report: Base pin
-- finding: Required literal not found in full in the builder report: ASCII Aurora
-- finding: Required literal not found in full in the builder report: Made with ANVIL, an open source software factory.
-- finding: Required literal not found in full in the builder report: https://anvil-landing-7x1.pages.dev
-- finding: Required literal not found in full in the builder report: 74,222,128
-- finding: Required literal not found in full in the builder report: S1
-- finding: Required literal not found in full in the builder report: S2
-- finding: Required literal not found in full in the builder report: S3
-- finding: Required literal not found in full in the builder report: S4
-- finding: Required literal not found in full in the builder report: S5
-- finding: Required literal not found in full in the builder report: S6
-- finding: Required literal not found in full in the builder report: S7
-- finding: Required literal not found in full in the builder report: evidence/stills/page-desktop.png
-- finding: Required literal not found in full in the builder report: evidence/stills/page-mobile.png
-- finding: Required literal not found in full in the builder report: evidence/stills/page-sound.png
-- finding: Required literal not found in full in the builder report: evidence/captures.json
+  - present: 7111f490472a5669f299b588b284ae72205206eb
+  - present: Base pin
+  - present: ASCII Aurora
+  - present: Made with ANVIL, an open source software factory.
+  - present: https://anvil-landing-7x1.pages.dev
+  - present: 74,222,128
+  - present: S1
+  - present: S2
+  - present: S3
+  - present: S4
+  - present: S5
+  - present: S6
+  - present: S7
+  - present: evidence/stills/page-desktop.png
+  - present: evidence/stills/page-mobile.png
+  - present: evidence/stills/page-sound.png
+  - present: evidence/captures.json
+- result: pass

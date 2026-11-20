@@ -3,14 +3,31 @@
   "from_station": "builder",
   "to_station": "checks-gate",
   "work_order_id": "wo-gh-1",
-  "artifact_path": "runs/wo-gh-1/builder.packet.md",
-  "status": "failed",
-  "created_at": "2026-11-20T06:12:52.132453+00:00",
-  "error": "command executor exited 1: Traceback (most recent call last):\n  File \"/home/runner/work/ascii-aurora/ascii-aurora/tools/claude_station.py\", line 54, in <module>\n    import copilot_runtime\nModuleNotFoundError: No module named 'copilot_runtime'",
+  "artifact_path": "runs/wo-gh-1/builder.output.md",
+  "status": "executed",
+  "created_at": "2026-11-20T12:29:32.332073+00:00",
+  "usage": {
+    "input_tokens": 3367178,
+    "output_tokens": 55500,
+    "cached_input_tokens": 3254690,
+    "cache_creation_input_tokens": 112416,
+    "reasoning_tokens": 0,
+    "total_tokens": 3422678,
+    "input_tokens_includes_cache": true
+  },
+  "tokens": {
+    "input_tokens": 3367178,
+    "output_tokens": 55500,
+    "cached_input_tokens": 3254690,
+    "cache_creation_input_tokens": 112416,
+    "reasoning_tokens": 0,
+    "total_tokens": 3422678,
+    "input_tokens_includes_cache": true
+  },
   "configured_model": "claude-opus-5-5",
   "executor": {
     "kind": "command",
     "detail": "python3"
   },
-  "executed_model": null
+  "executed_model": "claude-opus-5-5"
 }

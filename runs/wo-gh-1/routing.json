@@ -1,0 +1,106 @@
+{
+  "selected_reviewers": [
+    "reviewer-spec",
+    "reviewer-tests",
+    "reviewer-design",
+    "reviewer-ux"
+  ],
+  "routed_out": [
+    {
+      "reviewer": "reviewer-security",
+      "reason": "Routed out by low risk rule with surface exceptions"
+    },
+    {
+      "reviewer": "reviewer-architecture",
+      "reason": "Routed out by low risk rule with surface exceptions"
+    }
+  ],
+  "selected_models": {
+    "reviewer-spec": "review-cheap",
+    "reviewer-tests": "review-cheap",
+    "reviewer-design": "review-balanced",
+    "reviewer-ux": "review-balanced"
+  },
+  "reason": "Low risk; UI surface keeps reviewer-design and reviewer-ux",
+  "practices": {
+    "resolved": {
+      "intake": [],
+      "spec-writer": [],
+      "test-writer": [],
+      "builder": [],
+      "checks-gate": [],
+      "reviewer-spec": [],
+      "reviewer-security": [],
+      "reviewer-tests": [],
+      "reviewer-architecture": [],
+      "reviewer-design": [],
+      "reviewer-ux": [],
+      "approver": [],
+      "triage-human": [],
+      "deployer": [],
+      "observer": []
+    },
+    "excluded_topics": [],
+    "active_count": 0
+  },
+  "skills": {
+    "resolved": {
+      "intake": [],
+      "spec-writer": [
+        "architecture-fundamentals",
+        "spec-writing"
+      ],
+      "test-writer": [
+        "test-design"
+      ],
+      "builder": [
+        "architecture-fundamentals",
+        "design-md",
+        "design-taste",
+        "image-to-code",
+        "implementation-craft",
+        "interface-design",
+        "security-baseline",
+        "web-engineering"
+      ],
+      "checks-gate": [],
+      "reviewer-spec": [],
+      "reviewer-security": [
+        "security-baseline"
+      ],
+      "reviewer-tests": [
+        "test-design"
+      ],
+      "reviewer-architecture": [
+        "architecture-fundamentals"
+      ],
+      "reviewer-design": [
+        "design-md",
+        "explainer-video",
+        "image-to-code",
+        "web-design-guidelines"
+      ],
+      "reviewer-ux": [
+        "web-design-guidelines"
+      ],
+      "approver": [],
+      "triage-human": [],
+      "deployer": [],
+      "observer": []
+    },
+    "disabled": [],
+    "catalog_count": 18,
+    "signals": {
+      "surfaces": [
+        "content",
+        "ui"
+      ],
+      "product_types": [
+        "interface"
+      ],
+      "kinds": [
+        "feature"
+      ]
+    }
+  }
+}
