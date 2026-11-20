@@ -23,6 +23,13 @@ name: anvil-execute-wo-gh-1
 # this project carries no tools/copilot_runtime.py, the wrapper now finds
 # it in the pinned factory checkout). The order's required base pin
 # literal moves with the pin in this same amendment. No spec or limit changes.
+#
+# Re-fire amendment 3 (operator, 2026-11-20, owner's order): run 3 ended
+# budget_exceeded at the 3.5M run token threshold after intake, spec-writer,
+# test-writer and builder executed and the checks gate passed (about 4.5M
+# used). anvil.yaml limits move to the factory's recalibration: 100 runtime
+# turns and 15M run tokens. max_agent_calls stays 16. No spec, order or pin
+# changes.
 # Trigger: the vault PAT cannot dispatch workflows, so the trigger is a
 # push to the anvil/run-ascii-aurora-wo-gh-1 branch. The commit this workflow pushes
 # back uses GITHUB_TOKEN, which does not retrigger workflows, so the
